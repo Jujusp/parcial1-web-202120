@@ -18,4 +18,34 @@
 
 ## Documentación endpoint
 
-Agregue aquí al documentación del endpoint elaborado.
+Para poder acceder a la opción de buscar las parejas de jugadores se habilita el siguiente Endpoint:
+   ```GET
+   /api?goal={queryParam}
+   ```
+ Como se puede observar hay un parámetro que se llama goal y define cuanto se espera que sea la suma.
+ 
+ La respuesta satisfactoria en este caso para el ejemplo con 139 es:
+ ```
+ {
+    "players": [
+        [
+            "Brevin Knight",
+            "Nate Robinson"
+        ],
+        [
+            "Nate Robinson",
+            "Mike Wilks"
+        ]
+    ]
+}
+```
+
+La respuesta cuando no hay parejas es:
+
+```
+{
+    "msg": "No matches found"
+}
+```
+
+ 
